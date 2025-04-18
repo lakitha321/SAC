@@ -14,7 +14,7 @@ if st.button("Generate Architecture"):
     if user_input:
         with st.spinner("Generating architecture..."):
             response = openai.chat.completions.create(
-                model="gpt-4",
+                model="gpt-3.5-turbo",
                 messages=[
                     {"role": "system", "content": "You are a software architect."},
                     {"role": "user", "content": f"Given this requirement: {user_input}, extract functional and non-functional requirements, suggest architecture components, architecture style, justification, and generate a Mermaid diagram of the architecture."}
