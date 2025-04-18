@@ -16,7 +16,6 @@ if st.button("Generate Architecture"):
     if user_input:
         with st.spinner("Generating architecture..."):
             response = openai.chat.completions.create(
-            response = openai.chat.completions.create(
                 model="gpt-3.5-turbo",
                 messages=[
                     {"role": "system", "content": "You are a software architect."},
