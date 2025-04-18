@@ -2,7 +2,7 @@ import streamlit as st
 import openai
 import os
 
-openai.api_key="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")
+openai.api_key="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"
 
 st.title("AI Software Architecture Workbench")
 
