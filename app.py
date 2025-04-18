@@ -1,5 +1,6 @@
 import streamlit as st
 import openai
+import openai
 import os
 
 openai.api_key = os.getenv("OPENAI_API_KEY")
@@ -14,6 +15,7 @@ user_input = st.text_area("Enter high-level user requirements:")
 if st.button("Generate Architecture"):
     if user_input:
         with st.spinner("Generating architecture..."):
+            response = openai.chat.completions.create(
             response = openai.chat.completions.create(
                 model="gpt-3.5-turbo",
                 messages=[
